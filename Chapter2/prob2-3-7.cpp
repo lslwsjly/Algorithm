@@ -1,19 +1,13 @@
 //
-//  mergeSort.cpp
+//  prob2.cpp
 //  Algorithm
 //
 //  Created by 李思良 on 15/5/28.
 //  Copyright (c) 2015年 lsl. All rights reserved.
 //
-
-
 #include <iostream>
 using namespace std;
-
-int *vector;
-
-// merge array[start...middle], array[middle+1...end]
-void merge(int array[], int start, int middle, int end) {
+void merge(int array[], int start, int middle, int end, int vector[]) {
     int s1 = start;
     int s2 = middle + 1;
     for(int i = start; i <= end; i++) {
@@ -39,23 +33,38 @@ void merge(int array[], int start, int middle, int end) {
         }
     }
 }
-void mergeSort(int array[], int start, int end) {
+void mergeSort2(int array[], int start, int end, int vector[]) {
     if (start == end) {
         return;
     }
     int middle = (start + end)/2;
-    mergeSort(array, start, middle);
-    mergeSort(array, middle + 1, end);
-    merge(array, start, middle, end);
+    mergeSort2(array, start, middle, vector);
+    mergeSort2(array, middle + 1, end, vector);
+    merge(array, start, middle, end, vector);
     
 }
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    int a[7] = {9,1,3,10,2,6,7};
-    vector = new int[7];
-    mergeSort(a, 0, 6);
-    for (int i = 0; i < 7; i++) {
-        cout << a[i] << " ";
+
+bool check(int a[], int length, int x) {
+    int left = 0;
+    int right = length - 1;
+    while (left != right) {
+        if (a[left] + a[right] == x) {
+            return true;
+        }
+        if (a[left] + a[right] < x) {
+            left ++;
+        } else {
+            right --;
+        }
     }
+    return false;
+}
+
+int main() {
+    int a[6] = {1,3,4,9,6,3};
+    int *vector = new int[6];
+    mergeSort2(a, 0, 5, vector);
+    cout << check(a, 6, 5) << endl;
+    cout << check(a, 6, 8) << endl;
     return 0;
 }

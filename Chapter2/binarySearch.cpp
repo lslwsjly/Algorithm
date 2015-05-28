@@ -27,8 +27,8 @@ int binarySearch(T array[], T key, int length) {
     }
     return -1;
 }
-//int main() {
-//    int a[6] = {1,2,4,5,8,9};
-//    cout << binarySearch(a, 4, 6) << endl << binarySearch(a, 3, 6) << endl;
-//    return 0;
-//}
+int main() {
+    int a[6] = {1,2,4,5,8,9};
+    cout << binarySearch(a, 4, 6) << endl << binarySearch(a, 3, 6) << endl;
+    return 0;
+}

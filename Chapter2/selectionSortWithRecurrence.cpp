@@ -26,12 +26,12 @@ void sort(T array[], int length) {
     }
     array[i + 1] = key;
 }
-//int main(int argc, const char * argv[]) {
-//    // insert code here...
-//    int a[6] = {9,3,4,2,6,7};
-//    sort(a, 6);
-//    for (int i = 0; i < 6; i++) {
-//        cout << a[i] << " ";
-//    }
-//    return 0;
-//}
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    int a[6] = {9,3,4,2,6,7};
+    sort(a, 6);
+    for (int i = 0; i < 6; i++) {
+        cout << a[i] << " ";
+    }
+    return 0;
+}

@@ -25,13 +25,13 @@ bool selectionSort(T array[], int length) {
     }
     return true;
 }
-//int main(int argc, const char * argv[]) {
-//    // insert code here...
-//    int a[6] = {1,3,4,2,6,7};
-//    if (selectionSort(a, 6)) {
-//        for (int i = 0; i < 6; i++) {
-//            cout << a[i] << " ";
-//        }
-//    }
-//    return 0;
-//}
+int main(int argc, const char * argv[]) {
+    // insert code here...
+    int a[6] = {1,3,4,2,6,7};
+    if (selectionSort(a, 6)) {
+        for (int i = 0; i < 6; i++) {
+            cout << a[i] << " ";
+        }
+    }
+    return 0;
+}
