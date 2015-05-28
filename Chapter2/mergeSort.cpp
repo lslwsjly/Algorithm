@@ -53,13 +53,13 @@ void mergeSort(T array[], int start, int end) {
     merge(array, start, middle, end);
     
 }
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    int a[7] = {9,1,3,10,2,6,7};
-    vector = new int[7];
-    mergeSort(a, 0, 6);
-    for (int i = 0; i < 7; i++) {
-        cout << a[i] << " ";
-    }
-    return 0;
-}
+//int main(int argc, const char * argv[]) {
+//    // insert code here...
+//    int a[7] = {9,1,3,10,2,6,7};
+//    vector = new int[7];
+//    mergeSort(a, 0, 6);
+//    for (int i = 0; i < 7; i++) {
+//        cout << a[i] << " ";
+//    }
+//    return 0;
+//}
