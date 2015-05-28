@@ -12,12 +12,8 @@ using namespace::std;
 
 int *vector;
 
-template <class T>
 // merge array[start...middle], array[middle+1...end]
-void merge(T array[], int start, int middle, int end) {
-    if (start == end) {
-        return;
-    }
+void merge(int array[], int start, int middle, int end) {
     int s1 = start;
     int s2 = middle + 1;
     for(int i = start; i <= end; i++) {
@@ -42,8 +38,7 @@ void merge(T array[], int start, int middle, int end) {
         }
     }
 }
-template <class T>
-void mergeSort(T array[], int start, int end) {
+void mergeSort(int array[], int start, int end) {
     if (start == end) {
         return;
     }
