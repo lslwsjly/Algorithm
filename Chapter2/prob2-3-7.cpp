@@ -7,7 +7,9 @@
 //
 #include <iostream>
 using namespace std;
-void merge(int array[], int start, int middle, int end, int vector[]) {
+int *vector;
+// merge array[start...middle], array[middle+1...end]
+void merge(int array[], int start, int middle, int end) {
     int s1 = start;
     int s2 = middle + 1;
     for(int i = start; i <= end; i++) {
@@ -33,14 +35,14 @@ void merge(int array[], int start, int middle, int end, int vector[]) {
         }
     }
 }
-void mergeSort2(int array[], int start, int end, int vector[]) {
+void mergeSort(int array[], int start, int end) {
     if (start == end) {
         return;
     }
     int middle = (start + end)/2;
-    mergeSort2(array, start, middle, vector);
-    mergeSort2(array, middle + 1, end, vector);
-    merge(array, start, middle, end, vector);
+    mergeSort(array, start, middle);
+    mergeSort(array, middle + 1, end);
+    merge(array, start, middle, end);
     
 }
 
@@ -62,8 +64,8 @@ bool check(int a[], int length, int x) {
 
 int main() {
     int a[6] = {1,3,4,9,6,3};
-    int *vector = new int[6];
-    mergeSort2(a, 0, 5, vector);
+    vector = new int[6];
+    mergeSort(a, 0, 5);
     cout << check(a, 6, 5) << endl;
     cout << check(a, 6, 8) << endl;
     return 0;
