@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 lsl. All rights reserved.
 //
 
-#include <stdio.h>
+
 #include <iostream>
-using namespace::std;
+using namespace std;
 
 template <class T>
 bool insertSort(T array[], int length) {

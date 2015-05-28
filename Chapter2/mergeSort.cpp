@@ -6,9 +6,9 @@
 //  Copyright (c) 2015年 lsl. All rights reserved.
 //
 
-#include <stdio.h>
+
 #include <iostream>
-using namespace::std;
+using namespace std;
 
 int *vector;
 
@@ -27,6 +27,7 @@ void merge(int array[], int start, int middle, int end) {
                     array[pos++] = vector[s1++];
                 }
             } else {
+                //we do not need to copy since the right part of the array has been sorted
                 pos = end + 1;
             }
         } else {
