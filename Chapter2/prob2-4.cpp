@@ -50,12 +50,12 @@ void mergeSort(int array[], int start, int end) {
     mergeSort(array, middle + 1, end);
     merge(array, start, middle, end);
 }
-int main() {
-    int a[MAXSIZE];
-    for (int i = 0; i < MAXSIZE; i++) {
-        a[i] = MAXSIZE - i;
-    }
-    mergeSort(a, 0, MAXSIZE - 1);
-    cout << pCount << endl;
-    return 0;
-}
+//int main() {
+//    int a[MAXSIZE];
+//    for (int i = 0; i < MAXSIZE; i++) {
+//        a[i] = MAXSIZE - i;
+//    }
+//    mergeSort(a, 0, MAXSIZE - 1);
+//    cout << pCount << endl;
+//    return 0;
+//}
